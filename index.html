@@ -123,6 +123,26 @@
         src: url("fonts/merriweather-bold-italic.woff2") format("woff2");
         font-display: swap;
       }
+      html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        font-size: 10px;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        body {
+          color: #202020;
+        }
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857;
+        color: #333333;
+        background-color: #fff;
+      }
+
       #fh5co-home {
         min-height: 700px;
         background: #fff url(../images/loader.gif) no-repeat center center;
@@ -141,21 +161,19 @@
         margin-top: -212px;
         text-align: center;
       }
-      #fh5co-home .flexslider .fh5co-text h1 {
-        margin: 0;
-        padding: 0;
+      #fh5co-home .fh5co-text h1 {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
         font-family: "Playfair Display", serif;
-        font-size: 300px;
+        font-size: 120px;
         font-weight: 700;
         font-style: italic;
         color: #fff;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
       }
       @media screen and (max-width: 992px) {
         #fh5co-home .flexslider .fh5co-text h1 {
-          font-size: 100px;
+          font-size: 80px;
         }
       }
       #fh5co-home .flexslider .fh5co-text h2 {
@@ -186,6 +204,8 @@
       #fh5co-home .flexslider .slides li {
         background-repeat: no-repeat;
         background-size: cover;
+        width: 100vw;
+        height: 100vh;
       }
       #fh5co-home .flexslider .fh5co-overlay {
         position: absolute;
@@ -1007,9 +1027,9 @@
     <script src="js/moment.js"></script>
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
+    <script defer src="js/jquery.waypoints.min.js"></script>
     <!-- Stellar Parallax -->
-    <script src="js/jquery.stellar.min.js"></script>
+    <script defer src="js/jquery.stellar.min.js"></script>
 
     <!-- Flexslider -->
     <script src="js/jquery.flexslider-min.js"></script>
