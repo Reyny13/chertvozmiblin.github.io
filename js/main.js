@@ -136,7 +136,7 @@
 
 			$('#fh5co-home .fh5co-text').css({
 		      'opacity' : 1-(scrollPos/300),
-		      'transform': `translateY(${scrollPos}px)`
+		      'margin-top' : (-212) + (scrollPos/1)
 		   });
 
 		   $('#fh5co-home .flexslider .fh5co-overlay').css({
