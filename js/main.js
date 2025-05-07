@@ -232,21 +232,24 @@
   };
 
   // Animations
-  var homeAnimate = function () {
+  var homeAnimate = function() {
     if ($("#fh5co-home").length > 0) {
-      // Убираем задержки для LCP-элемента
-      $("#fh5co-home .fh5co-text h1").css({
-        opacity: 1,
-        transform: "translateY(0)",
+      // Устанавливаем стили сразу при загрузке, без ожидания DOM ready
+      document.addEventListener('DOMContentLoaded', function() {
+        var h1 = document.querySelector("#fh5co-home .fh5co-text h1");
+        if (h1) {
+          h1.style.opacity = 1;
+          h1.style.transform = "translateY(0)";
+        }
       });
-
-      // Остальные элементы анимируем как обычно
+      
+      // Остальной код waypoint оставляем как есть
       $("#fh5co-home").waypoint(
-        function (direction) {
+        function(direction) {
           if (direction === "down" && !$(this.element).hasClass("animated")) {
-            $(".to-animate:not(.fh5co-text h1)").each(function (k) {
+            $(".to-animate:not(.fh5co-text h1)").each(function(k) {
               var el = $(this);
-              setTimeout(function () {
+              setTimeout(function() {
                 el.addClass("fadeInUp animated");
               }, k * 200);
             });
